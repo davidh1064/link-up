@@ -1,4 +1,6 @@
 import ReachDOM from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
 import App from "./App";
 
-ReachDOM.createRoot(document.getElementById("root")!).render(<App />);
+ReachDOM.createRoot(document.getElementById("root")!).render(
+<BrowserRouter> <App /> </BrowserRouter>);
