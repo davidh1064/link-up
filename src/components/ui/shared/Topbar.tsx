@@ -42,7 +42,6 @@ const Topbar = () => {
           </Link>
         </div>
       </div>
-      Topbar
     </section>
   );
 };
