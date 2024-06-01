@@ -59,6 +59,8 @@ export async function signInAccount(user: { email: string; password: string }) {
       user.password
     );
 
+    console.log(session);
+
     return session;
   } catch (error) {
     console.log(error);
