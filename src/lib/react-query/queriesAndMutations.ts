@@ -174,7 +174,7 @@ export const useGetPosts = () => {
     getNextPageParam: (lastPage) => {
       if (lastPage && lastPage.documents.length === 0) return null;
 
-      const lastId = lastPage?.documents[lastPage.documents.length - 1].$id;
+      const lastId = lastPage.documents[lastPage.documents.length - 1].$id;
 
       return lastId;
     },
@@ -183,7 +183,7 @@ export const useGetPosts = () => {
 
 export const useSearchPosts = (searchTerm: string) => {
   return useQuery({
-    queryKey: [QUERY_KEYS.SEARCH_POSTS],
+    queryKey: [QUERY_KEYS.SEARCH_POSTS, searchTerm],
     queryFn: () => searchPost(searchTerm),
     enabled: !!searchTerm,
   });
