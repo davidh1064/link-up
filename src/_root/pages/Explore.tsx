@@ -1,7 +1,7 @@
 import { Input } from "@/components/ui/input";
-import GridPostList from "@/components/ui/shared/GridPostList";
-import Loader from "@/components/ui/shared/Loader";
-import SearchResults from "@/components/ui/shared/SearchResults";
+import GridPostList from "@/components/shared/GridPostList";
+import Loader from "@/components/shared/Loader";
+import SearchResults from "@/components/shared/SearchResults";
 import useDebounce from "@/hooks/useDebounce";
 import {
   useGetPosts,
@@ -21,7 +21,7 @@ const Explore = () => {
 
   useEffect(() => {
     if (inView && !searchValue) fetchNextPage();
-  }, [inView, searchValue])
+  }, [inView, searchValue]);
 
   if (!posts) {
     return (
@@ -74,8 +74,8 @@ const Explore = () => {
       <div className="flex flex-wrap gap-9 w-full max-w-5xl">
         {shouldShowSearchResults ? (
           <SearchResults
-          isSearchFetching={isSearchFetching}
-          searchedPosts={searchedPosts}
+            isSearchFetching={isSearchFetching}
+            searchedPosts={searchedPosts}
           />
         ) : shouldShowPosts ? (
           <p className="text-light-4 mt-10 text-center w-full">End of posts</p>

@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
-import Loader from "@/components/ui/shared/Loader";
-import PostStats from "@/components/ui/shared/PostStats";
+import Loader from "@/components/shared/Loader";
+import PostStats from "@/components/shared/PostStats";
 import { useUserContext } from "@/context/AuthContext";
 import { useGetPostById } from "@/lib/react-query/queriesAndMutations";
 import { multiFormatDateString } from "@/lib/utils";
