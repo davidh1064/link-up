@@ -8,6 +8,7 @@ import {
   Home,
   PostDetails,
   Profile,
+  Saved,
   UpdateProfile,
 } from "./_root/pages";
 
@@ -30,6 +31,7 @@ const App = () => {
         <Route element={<RootLayout />}>
           <Route index element={<Home />} />
           <Route path="/explore" element={<Explore />} />
+          <Route path="/saved" element={<Saved />} />
           <Route path="/create-post" element={<CreatePost />} />
           <Route path="/update-post/:id" element={<EditPost />} />
           <Route path="/posts/:id" element={<PostDetails />} />
