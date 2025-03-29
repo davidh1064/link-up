@@ -8,7 +8,7 @@ pnpm-debug.log*
 lerna-debug.log*
 
 # Ignore JS-related files inside node_modules and Vite deps
-node_modules/
+node_modules
 node_modules/**/*.js*
 .vite/
 .vite/**/*.js*
