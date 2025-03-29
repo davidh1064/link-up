@@ -1,12 +1,20 @@
 import { Routes, Route } from "react-router-dom";
 import SigninForm from "./_auth/forms/SigninForm";
 import SignupForm from "./_auth/forms/SignupForm";
-import {  CreatePost, EditPost, Explore, Home, PostDetails, Profile, UpdateProfile } from "./_root/pages";
+import {
+  CreatePost,
+  EditPost,
+  Explore,
+  Home,
+  PostDetails,
+  Profile,
+  UpdateProfile,
+} from "./_root/pages";
 
 import "./globals.css";
 import AuthLayout from "./_auth/AuthLayout";
 import RootLayout from "./_root/RootLayout";
-import { Toaster } from "@/components/ui/Toaster";
+import { Toaster } from "@/components/ui/toaster";
 
 const App = () => {
   return (

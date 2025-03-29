@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 
-import { Button } from "@/components/ui/Button";
+import { Button, useToast } from "@/components/ui";
 import {
   Form,
   FormControl,
@@ -12,11 +12,10 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/components/ui/Form";
-import { Input } from "@/components/ui/Input";
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
 import { SignupValidation } from "@/lib/validation";
-import Loader from "@/components/shared/Loader";
-import { useToast } from "@/components/ui/use-toast";
+import { Loader } from "@/components/shared";
 import {
   useCreateUserAccount,
   useSignInAccount,
