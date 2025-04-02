@@ -82,7 +82,7 @@ const SignupForm = () => {
           Create a new account
         </h2>
         <p className="text-light-3 small-medium md:base-regular">
-          To use LinkUp, please enter your account details
+          To use Social Sphere, please enter your account details
         </p>
 
         <form
