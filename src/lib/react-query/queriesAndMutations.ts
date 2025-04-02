@@ -1,4 +1,4 @@
-import { INewPost, INewUser, IUpdatePost } from "@/types";
+import { INewPost, INewUser, IUpdatePost, IUpdateUser } from "@/types";
 import {
   useInfiniteQuery,
   useMutation,
@@ -172,14 +172,14 @@ export const useDeletePost = () => {
 export const useGetPosts = () => {
   return useInfiniteQuery({
     queryKey: [QUERY_KEYS.GET_INFINITE_POSTS],
-    queryFn: getInfinitePosts,
+    queryFn: ({ pageParam = 0 }) => getInfinitePosts({ pageParam }),
     getNextPageParam: (lastPage) => {
-      if (lastPage && lastPage.documents.length === 0) return null;
+      if (!lastPage || lastPage.documents.length === 0) return undefined;
 
       const lastId = lastPage.documents[lastPage.documents.length - 1].$id;
-
-      return lastId;
+      return parseInt(lastId);
     },
+    initialPageParam: 0,
   });
 };
 
