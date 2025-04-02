@@ -2,7 +2,7 @@
 
 A modern social media platform built with React, TypeScript, and Appwrite backend.
 
-🌐 **Live Demo (deployed on Vercel)**: [social-media-app-pi-gold.vercel.app](https://social-media-app-pi-gold.vercel.app)
+🌐 **Live Demo (deployed on Vercel)**: [Social Sphere](https://social-media-app-pi-gold.vercel.app)
 
 ## 🚀 Features
 
